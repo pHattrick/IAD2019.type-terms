@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Versalien und Kapitälchen</title>
+
+  <style type="text/css">
+    pre,
+    code {
+      background-color: #282923;
+      color: #ffffff;
+    }
+
+    pre {
+      padding: .25rem 1rem 1rem;
+      border-radius: .125rem;
+    }
+
+    .css-name-selector,
+    .css-unit {
+      color: #FC1B70;
+    }
+
+    .css-class-selector {
+      color: #A4E400;
+    }
+
+    .css-property,
+    .css-value {
+      color: #61D8F1
+    }
+
+    .css-property {
+      font-style: italic;
+    }
+
+    .css-value-number {
+      color: #AD7CFF
+    }
+
+    p code {
+      padding: .125em .375em;
+      border-radius: .125rem;
+    }
+  </style>
+</head>
+<body>
+
+
+<h1>Versalien und Kapitälchen</h1>
+<p>
+  Versalien ist in der Typografie der Begriff für Grossbuchstaben. Diese werden auch Majuskel genannt. Der Begriff Versalien stammt vom lateinischen  Wort &laquo;versus&raquo; ab und bedeutet so viel wie Zeile, Furche oder das Umwenden des Pfluges.
+  Die Anwendung der Versalien wird heute in der Deutschen Sprache durch die Rechtschreibung bestimmt. So wird zum Beispiel immer der erste Buchstaben eines Satzes oder eines Nomens gross geschrieben.<br>
+  Die Versalschrift wurde ursprünglich als Auszeichnungsart verwendet wie zum Beispiel auch fette und kursive Schriften. Gerade als Initiale wurden die Versalien oft verwendet.
+</p>
+
+<p>
+  Eine weitere Auszeichnungsart sind die Kapitälchen. Kapitälchen sind Buchstaben in der Form von Versalien, welche in der Grösse und Schriftstärke von Kleinbuchstaben dargestellt werden. Die Kapitälchen werden heute häufig verwendet um zum Beispiel Namen leise auszuzeichnen.
+  Beinhaltet eine Schriftart keine Kapitälchen so können Textbearbeitungsprogramme Versalien skalieren. Diese werden als &laquo;falsche Kapitälchen&raquo; bezeichnet.
+</p>
+
+<p>
+  Mit CSS können die beiden Auszeichnungsarten gesteuert werden. Mit Hilfe des <code><span class="css-property">text-transform</span></code> Property können Versalien in einem beliebigen Element forciert werden.
+</p>
+
+<pre><code>
+<span class="css-name-selector">h1</span> {
+  <span class="css-property">text-transform</span>: <span class="css-value-number">uppercase</span>;
+}
+</code></pre>
+
+<p>In Kombination mit dem Pseudo Element <code><span class="css-class-selector">::first-letter</span></code> kann eine Initiale gestaltet werden werden.</p>
+
+<pre><code>
+<span class="css-name-selector">p</span><span class="css-class-selector">::first-letter</span> {
+  <span class="css-property">text-transform</span>: <span class="css-value">uppercase</span>;
+  <span class="css-property">font-size</span>: <span class="css-value-number">2</span><span class="css-unit">em</span>;
+}
+</code></pre>
+
+<p>
+  Um einen Text mit Kapitälchen darzustellen, kann das Property <code><span class="css-name-selector">font-variant</span></code> verwendet werden. Mit dem Wert <code><span class="css-value-number">small-caps</span></code> wird der jeweils erste Buchstaben eines Wortes ignoriert, sofern dieser eine Versalbuchstaben ist. Mit <code><span class="css-value-number">all-small-caps</span></code> wird auch der erste Buchstabe eines Wortes immer berücksichtigt.
+</p>
+
+<pre><code>
+<span class="css-name-selector">p</span> {
+  <span class="css-property">font-variant-caps</span>: <span class="css-value-number">small-caps</span>;
+  <span class="css-property">font-variant-caps</span>: <span class="css-value-number">all-small-caps</span>;
+}
+</code></pre>
+
+
+<h2>Quellen</h2>
+<ul>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://de.wikipedia.org/wiki/Versal">Versal – Wikipedia</a></li>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://www.typografie.info/3/wiki.html/v/versalien-r179/">Versalien – Typografie-Wiki</a></li>
+</ul>
+
+<ul>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://de.wikipedia.org/wiki/Kapit%C3%A4lchen">Kapitälchen – Wikipedia</a></li>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://www.typolexikon.de/kapitaelchen/">Kapitälchen – Typolexikon</a></li>
+</ul>
+
+<ul>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">text-transform – Mozilla Developer Network</a></li>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter">::first-letter – Mozilla Developer Network</a></li>
+  <li><a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">font-variant – Mozilla Developer Network</a></li>
+</ul>
+
+</body>
+</html>
